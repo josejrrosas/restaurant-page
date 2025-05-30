@@ -1,1 +1,1 @@
-console.log("Hello from index.js!");
+console.log("Restaurant Page Webpack is working!");
