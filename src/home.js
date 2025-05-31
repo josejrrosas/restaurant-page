@@ -1,3 +1,6 @@
+function displayHome(){
+
+
 const content = document.getElementById("content");
 
 const headliner = document.createElement("h1");
@@ -15,3 +18,6 @@ const contentP = document.createElement("p");
 contentP.textContent =
   "Experience the finest Italian cuisine this side of the Mushroom Kingdom.Handmade pasta, wood-fired pizzas, and a warm family atmosphere await!";
 content.appendChild(contentP);
+}
+
+export { displayHome};
