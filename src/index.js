@@ -3,24 +3,25 @@ import displayMenu from "./menu";
 import displayAbout from "./about";
 import './style.css';
 
-const tabMap = {
-  "home-btn": displayHome,
-  "menu-btn": displayMenu,
-  "about-btn": displayAbout,
-};
+const tabs = [
+  { id: "home-btn", action: displayHome },
+  { id: "menu-btn", action: displayMenu },
+  { id: "about-btn", action: displayAbout },
+];
+
+const content = document.getElementById("content");
 
 function clearContent() {
-  document.getElementById("content").innerHTML = "";
+  content.innerHTML = "";
 }
 
-// Set up event listeners for each tab button
-Object.entries(tabMap).forEach(([btnId, tabFunction]) => {
-  const button = document.getElementById(btnId);
+tabs.forEach(tab => {
+  const button = document.getElementById(tab.id);
   button.addEventListener("click", () => {
     clearContent();
-    tabFunction();
+    tab.action();
   });
 });
 
-// Load default tab
+// Load home tab by default
 displayHome();
