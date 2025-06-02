@@ -1,20 +1,24 @@
 function displayAbout() {
-  const content = document.getElementById("content");
+  const content = document.querySelector("#content");
 
-  const headliner = document.createElement("h1");
-  headliner.textContent = "Welcome to Mario's Trattoria";
-  content.appendChild(headliner);
+  const headerText = document.createElement("h2");
+  headerText.textContent = "About Mario's Trattoria";
 
-  const contentImg = document.createElement("img");
-  contentImg.src =
-    "https://media.istockphoto.com/id/1975701807/photo/bucatini-pasta-with-tomato-sauce-and-basil-leaves.jpg?s=1024x1024&w=is&k=20&c=Ya8m3IoV5K6H_HOb2Ao-VpHlqv8rOLYO2SF4x0RHBYI=";
-  contentImg.alt = "A delicious dish from our restaurant";
-  contentImg.width = 400;
-  content.appendChild(contentImg);
+  const aboutParagraph = document.createElement("p");
+  aboutParagraph.textContent =
+    "Mario's Trattoria was founded in 1992 by the legendary chef Mario himself. Our passion for authentic Italian cuisine has brought generations of families together over handcrafted pasta and wood-fired pizza.";
 
-  const contentP = document.createElement("p");
-  contentP.textContent = "About Page";
-  content.appendChild(contentP);
+  const secondParagraph = document.createElement("p");
+  secondParagraph.textContent =
+    "We believe in fresh ingredients, bold flavors, and a dining experience that's warm and unforgettable. Whether it's your first time or your hundredth, you're part of the family here.";
+
+  headerText.classList.add("about-heading");
+  aboutParagraph.classList.add("about-text");
+  secondParagraph.classList.add("about-text");
+
+  content.appendChild(headerText);
+  content.appendChild(aboutParagraph);
+  content.appendChild(secondParagraph);
 }
 
 export default displayAbout;

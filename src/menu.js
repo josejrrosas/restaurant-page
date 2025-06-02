@@ -1,21 +1,24 @@
 function displayMenu() {
-  const content = document.getElementById("content");
+  const content = document.querySelector("#content");
+  const headerText = document.createElement("h2");
+  const menuText = document.createElement("p");
+  const menu2Text = document.createElement("p");
+  const menu3Text = document.createElement("p");
 
-  const headliner = document.createElement("h1");
-  headliner.textContent = "Welcome to Mario's Trattoria";
-  content.appendChild(headliner);
+  headerText.textContent = "Check Out Our Menu!";
+  menuText.textContent = "Burger";
+  menu2Text.textContent = "Pizza";
+  menu3Text.textContent = "Chicken Nugget";
 
-  const contentImg = document.createElement("img");
-  contentImg.src =
-    "https://media.istockphoto.com/id/1975701807/photo/bucatini-pasta-with-tomato-sauce-and-basil-leaves.jpg?s=1024x1024&w=is&k=20&c=Ya8m3IoV5K6H_HOb2Ao-VpHlqv8rOLYO2SF4x0RHBYI=";
-  contentImg.alt = "A delicious dish from our restaurant";
-  contentImg.width = 400;
-  content.appendChild(contentImg);
+  content.appendChild(headerText);
+  content.appendChild(menuText);
+  content.appendChild(menu2Text);
+  content.appendChild(menu3Text);
 
-  const contentP = document.createElement("p");
-  contentP.textContent =
-    "MENU PAGE";
-  content.appendChild(contentP);
+  headerText.classList.add("headerText");
+  menuText.classList.add("menuParagraph");
+  menu2Text.classList.add("menuParagraph");
+  menu3Text.classList.add("menuParagraph");
 }
 
 export default displayMenu;

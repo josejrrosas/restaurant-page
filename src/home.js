@@ -16,6 +16,9 @@ function displayHome() {
   contentP.textContent =
     "Experience the finest Italian cuisine this side of the Mushroom Kingdom.Handmade pasta, wood-fired pizzas, and a warm family atmosphere await!";
   content.appendChild(contentP);
+
+  headliner.classList.add("headliner");
+  contentP.classList.add("contentP");
 }
 
 export default displayHome;
