@@ -1,6 +1,5 @@
 function displayAbout() {
   const content = document.getElementById("content");
-  content.innerHTML = ''
 
   const headliner = document.createElement("h1");
   headliner.textContent = "Welcome to Mario's Trattoria";
@@ -14,8 +13,7 @@ function displayAbout() {
   content.appendChild(contentImg);
 
   const contentP = document.createElement("p");
-  contentP.textContent =
-    "Experience the finest Italian cuisine this side of the Mushroom Kingdom.Handmade pasta, wood-fired pizzas, and a warm family atmosphere await!";
+  contentP.textContent = "About Page";
   content.appendChild(contentP);
 }
 

@@ -1,6 +1,5 @@
 function displayHome() {
   const content = document.getElementById("content");
-  content.innerHTML = ''
 
   const headliner = document.createElement("h1");
   headliner.textContent = "Welcome to Mario's Trattoria";
